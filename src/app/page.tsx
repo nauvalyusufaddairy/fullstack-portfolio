@@ -35,7 +35,7 @@ function Navbar({
       <div className="hidden md:block ">
         {/* Navbar */}
         <div className="flex flex-col max-w-[1024px] ">
-          <div className="px-[16px]">
+          <div className="md:px-[18px] px-[8px]">
             <div className=" dark:bg-slate-800 bg-white w-full m-0 h-[72px] text-[22px] flex flex-row items-center py-[5px]">
               {/* Navbar logo  */}
               <div className=" w-[50%]  flex flex-row space-x-3 items-center  ">
@@ -72,15 +72,26 @@ function Navbar({
             {/* About section for md */}
 
             <div className="hidden md:block ">
-              <div className="w-full h-[500px] mt-[42px] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-300 to-purple-400 rounded-xl ">
-                <div className="w-full h-full dark:bg-slate-800/25 bg-white/25 backdrop-blur-sm px-[8px] py-[6px] rounded-xl"></div>
+              <div className="w-full h-[300px] mt-[36px] flex flex-row ">
+                <div className="w-[50%] text-[24px]  ">
+                  <p>
+                    Hi, I'm Nauval, a <span>Javascript fullstack</span> web
+                    developer and <span>Cloud engineer,</span> passionate in K8S
+                    based infrastructure and stunning web designs. Let's create
+                    awesome websites together
+                  </p>
+                </div>
+                <div></div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="xl:hidden md:hidden lg:hidden">
-        <div className="w-full h-[42px] flex flex-row px-[12px] py-[8px] items-center">
+        <div
+          className="w-full h-[42px] flex flex-row px-[12px] py-[8px] 
+        items-center"
+        >
           <div className="w-[65%] flex flex-row space-x-[8px] items-center">
             <div className=" w-[36px] h-[36px] rounded-[50%] dark:bg-white bg-slate-800 dark:text-slate-800 text-white  flex items-center justify-center">
               ADW
