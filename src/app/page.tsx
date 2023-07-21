@@ -2,6 +2,7 @@
 import { useState } from "react";
 
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
+import R3F from "@/components/R3F";
 export default function Homepage() {
   const [darkmode, setDarkmode] = useState(false);
 
@@ -42,7 +43,10 @@ function Navbar({
                 <div className="rounded-[50%] h-[54px] w-[54px] flex items-center justify-center ~~~ dark:bg-white bg-slate-800 dark:text-slate-800 text-white  ~~~~">
                   <h1>md</h1>
                 </div>
-                <div> Nauval Yusuf Addairy</div>
+                <div className=" font-burton font-bold text-2xl">
+                  {" "}
+                  Nauval Yusuf Addairy
+                </div>
               </div>{" "}
               {/* Darkmode Toogle */}
               <div className="w-[60%] h-[100px] flex flex-row items-center  justify-end space-x-[20px] mr-[10px]">
@@ -72,16 +76,27 @@ function Navbar({
             {/* About section for md */}
 
             <div className="hidden md:block ">
-              <div className="w-full h-[300px] mt-[36px] flex flex-row ">
-                <div className="w-[50%] text-[24px]  ">
-                  <p>
-                    Hi, I'm Nauval, a <span>Javascript fullstack</span> web
-                    developer and <span>Cloud engineer,</span> passionate in K8S
-                    based infrastructure and stunning web designs. Let's create
-                    awesome websites together
+              <div className="w-full h-[500px] mt-[36px] flex flex-row ">
+                <div className="w-[50%] lg:text-[32px] md:text-[24px]  flex flex-col justify-center ">
+                  <p className="text-justify">
+                    Hi, I'm Nauval, a{" "}
+                    <span className="font-bold  animate-gradient-js  text-transparent">
+                      Fullstack javascript
+                    </span>{" "}
+                    web developer and{" "}
+                    <span className="font-bold  animate-gradient-cloud  text-transparent">
+                      Cloud engineer
+                    </span>
+                    <span className="">
+                      Passionate in K8S based infrastructures and stunning web
+                      designs. Let's create awesome project together
+                    </span>
                   </p>
                 </div>
-                <div></div>
+                <div>
+                  {" "}
+                  . <R3F />
+                </div>
               </div>
             </div>
           </div>
@@ -96,7 +111,7 @@ function Navbar({
             <div className=" w-[36px] h-[36px] rounded-[50%] dark:bg-white bg-slate-800 dark:text-slate-800 text-white  flex items-center justify-center">
               ADW
             </div>
-            <span>Nauval Yusuf Affa</span>
+            <span className=" font-burton font-bold">Nauval Yusuf Addairy</span>
           </div>
           <div onClick={() => setDarkmode(!darkmode)} className="w-[25%]">
             <div

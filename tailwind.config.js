@@ -17,6 +17,9 @@ module.exports = {
 
      },
     extend: {
+      fontFamily:{
+        "burton":"burtons"
+      },
      
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
