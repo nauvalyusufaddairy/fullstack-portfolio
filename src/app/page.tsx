@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import R3F from "@/components/R3F";
+import Rocket from "@/components/Rocket";
 export default function Homepage() {
   const [darkmode, setDarkmode] = useState(false);
 
@@ -75,7 +76,7 @@ function Navbar({
             </div>
             {/* About section for md */}
 
-            <div className="hidden md:block ">
+            {/* <div className="hidden md:block ">
               <div className="w-full h-[500px] mt-[36px] flex flex-row ">
                 <div className="w-[50%] lg:text-[32px] md:text-[24px]  flex flex-col justify-center ">
                   <p className="text-justify">
@@ -95,10 +96,10 @@ function Navbar({
                 </div>
                 <div>
                   {" "}
-                  . <R3F />
+                  . <Rocket />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
