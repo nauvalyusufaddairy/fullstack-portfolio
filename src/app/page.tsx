@@ -33,7 +33,9 @@ export default function Home() {
       <main className=" bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between dark:text-white">
-            <h1 className=" font-burton text-xl">developedbyed</h1>
+            <p className=" font-burton text-xl font-bold">
+              {"</nvl>".toLowerCase()}
+            </p>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
@@ -54,7 +56,7 @@ export default function Home() {
           <div className="text-center p-10 py-10">
             <div className={` `}>
               <h2
-                className={` ${styles.grad} bg-clip-text  text-5xl py-2 text-transparent font-medium dark:text-teal-400 md:text-6xl`}
+                className={` ${styles.grad} text-5xl py-2 text-transparent font-medium md:text-6xl`}
               >
                 Nauval Yusuf Addairy
               </h2>
@@ -64,15 +66,17 @@ export default function Home() {
               Fullstack Developer and Cloud Engineer
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-              Freelancer providing services for building web applications with
-              their infrastructures. Join me down below and let's get cracking!
+              Freelancer providing services for building web application with
+              it's infrastructures. Join me down below and let's get cracking!
             </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
               <AiFillTwitterCircle />
               <AiFillLinkedin />
               <AiFillYoutube />
             </div>
-            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
+            <div
+              className={`mx-auto bg-gradient-to-b from-teal-500 ${styles.animated_border}  w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96`}
+            >
               <Image alt="deved" src={deved} layout="fill" objectFit="cover" />
             </div>
           </div>
