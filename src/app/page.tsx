@@ -7,7 +7,7 @@ import {
 } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
-import deved from "../../public/dev-ed-wave.png";
+import deved from "../../public/gj.png";
 import code from "../../public/code.png";
 import design from "../../public/design.png";
 import consulting from "../../public/consulting.png";
@@ -75,7 +75,7 @@ export default function Home() {
               <AiFillYoutube />
             </div>
             <div
-              className={`mx-auto bg-gradient-to-b from-teal-500 ${styles.animated_border}  w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96`}
+              className={`mx-auto bg-gradient-to-b from-teal-500 ${styles.animated_border}  w-[580px] h-80 relative overflow-hidden mt-20 md:h-96 md:w-96`}
             >
               <Image alt="deved" src={deved} layout="fill" objectFit="cover" />
             </div>
@@ -85,19 +85,21 @@ export default function Home() {
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Services I offer</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Since the beginning of my journey as a freelance designer and
-              developer, I've done remote work for
+              Since the beginning of my journey as a freelance cloud engineer
+              and fullstack developer, I've done remote work for
               <span className="text-teal-500"> agencies </span>
               consulted for <span className="text-teal-500">startups </span>
               and collaborated with talanted people to create digital products
               for both business and consumer use.
             </p>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer from a wide range of services, including brand design,
-              programming and teaching.
+              I offer from a wide range of services, including cloud
+              infrastructures solutions with devops manner ,tech consulting, web
+              design and backend development
             </p>
           </div>
-          <div className="lg:flex gap-10">
+          <div className="lg:flex gap-10 mt-16">
+            <h3 className="text-3xl py-1 dark:text-white ">My Skill Sets</h3>
             <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
               <Image alt="bd" src={design} width={100} height={100} />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
