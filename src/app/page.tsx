@@ -5,6 +5,7 @@ import {
   AiFillLinkedin,
   AiFillYoutube,
 } from "react-icons/ai";
+import { FaCloud } from "react-icons/fa";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
 import deved from "../../public/gj.png";
@@ -67,7 +68,8 @@ export default function Home() {
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
               Freelancer providing services for building web application with
-              it's infrastructures. Join me down below and let's get cracking!
+              it's best architectures to run. Join me down below and let's get
+              cracking!
             </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
               <AiFillTwitterCircle />
@@ -94,22 +96,23 @@ export default function Home() {
             </p>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               I offer from a wide range of services, including cloud
-              infrastructures solutions with devops manner ,tech consulting, web
+              architecture solutions with devops manner ,tech consulting, web
               design and backend development
             </p>
           </div>
           <div className="lg:flex gap-10 mt-16">
             <h3 className="text-3xl py-1 dark:text-white ">My Skill Sets</h3>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-              <Image alt="bd" src={design} width={100} height={100} />
+            <div className=" flex items-center  text-center flex-col p-10 rounded-xl my-10 bg-gray-800 text-white/80 dark:bg-white flex-1">
+              {/* <Image alt="bd" src={design} width={100} height={100} /> */}
+              <FaCloud className="w-[100px] h-[100px] " />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
-                Beautiful Designs
+                Cloud Engineering
               </h3>
               <p className="py-2">
-                Creating elegant designs suited for your needs following core
-                design theory.
+                Developing secure, high-availability and scalable cloud
+                architecture suited for your needs.
               </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
+              <h4 className="py-4 text-teal-600">Technologies I Use</h4>
               <p className="text-gray-800 py-1">Photoshop</p>
               <p className="text-gray-800 py-1">Illustrator</p>
               <p className="text-gray-800 py-1">Figma</p>
