@@ -104,7 +104,7 @@ export default function Home() {
             </motion.h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
               Freelancer providing services for building web application with
-              it's best architectures to run. Join me down below and let's get
+              its best architectures to run. Join me down below and lets get
               cracking!
             </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
@@ -134,7 +134,7 @@ export default function Home() {
             <h3 className="text-3xl py-1 dark:text-white ">Services I offer</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Since the beginning of my journey as a freelance cloud engineer
-              and fullstack developer, I've done remote work for
+              and fullstack developer, I have done remote work for
               <span className="text-teal-500"> agencies </span>
               consulted for <span className="text-teal-500">startups </span>
               and collaborated with talanted people to create digital products
@@ -193,7 +193,7 @@ export default function Home() {
               "
                 >
                   Do you have a project idea? I can develop your project from
-                  the front end to the back end. Let's talk !.
+                  the front end to the back end. Lets talk !.
                 </p>
                 <h4 className="py-4 text-teal-600 font-[500]">
                   Technologies I Use
@@ -256,7 +256,7 @@ export default function Home() {
             <h3 className="text-3xl py-1 dark:text-white ">Portofolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Since the beginning of my journey as a freelance designer and
-              developer, I've done remote work for
+              developer, I have done remote work for
               <span className="text-teal-500"> agencies </span>
               consulted for <span className="text-teal-500">startups </span>
               and collaborated with talanted people to create digital products
@@ -280,7 +280,6 @@ export default function Home() {
               <Image
                 className="w-full h-full rounded-lg object-cover"
                 alt="w2"
-                layout="responsive"
                 src={web2}
               />
             </div>
@@ -288,7 +287,6 @@ export default function Home() {
               <Image
                 alt="web3"
                 className="h-full w-full rounded-lg object-cover"
-                layout="responsive"
                 src={web3}
               />
             </div>
@@ -296,7 +294,6 @@ export default function Home() {
               <Image
                 className="w-full h-full rounded-lg object-cover"
                 alt="sd"
-                layout="responsive"
                 src={web4}
               />
             </div>
@@ -304,7 +301,6 @@ export default function Home() {
               <Image
                 className="w-full h-full rounded-lg object-cover"
                 alt="d"
-                layout="responsive"
                 src={web5}
               />
             </div>
