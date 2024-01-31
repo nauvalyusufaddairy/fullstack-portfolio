@@ -55,9 +55,9 @@ export default function Home() {
                 <AnimatePresence>
                   {theme === "dark" ? (
                     <motion.div
-                      initial={{ opacity: 0 }}
+                      initial={{ opacity: 0, x: -100 }}
                       transition={{ duration: 1, damping: 200, stiffness: 600 }}
-                      whileInView={{ opacity: 1 }}
+                      whileInView={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: -100 }}
                     >
                       <MdSunny />
@@ -121,7 +121,7 @@ export default function Home() {
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
               As a seasoned freelancer, I specialize in crafting
               high-performance web applications with top-notch architectures.
-              Join me, and let's make things happen!
+              Join me, and lets make things happen!
             </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
               <AiFillTwitterCircle />
@@ -152,13 +152,12 @@ export default function Home() {
               I specialize in creating powerful web applications using the{" "}
               <span className="text-teal-500">MERN</span> {"  "}stack and excel
               in <span className="text-teal-500">Cloud Development</span> {"  "}
-              with certifications to prove it. Whether you're a small business
+              with certifications to prove it. Whether you are a small business
               or a large enterprise, my services offer a seamless user
               experience, secure infrastructure, and tailored solutions. From
               custom software development to optimizing databases and
               implementing e-commerce platforms, I deliver robust and efficient
-              technology solutions. Let's elevate your digital presence
-              together.
+              technology solutions. Lets elevate your digital presence together.
             </p>
           </div>
           <div className=" mt-16 ">
