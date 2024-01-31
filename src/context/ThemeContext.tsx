@@ -8,7 +8,7 @@ type ThemeContextProps = {
 };
 export const ThemeContext = createContext<any>(null);
 const getLocalStorage = () => {
-  if (typeof window !== undefined) {
+  if (typeof window !== "undefined") {
     const value = localStorage.getItem("theme");
 
     return value || "";
