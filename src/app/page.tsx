@@ -1,37 +1,35 @@
-"use client";
-import Head from "next/head";
-import {
-  AiFillTwitterCircle,
-  AiFillLinkedin,
-  AiFillYoutube,
-} from "react-icons/ai";
-import { AiOutlineCloud } from "react-icons/ai";
-import { SiConsul } from "react-icons/si";
-import { CgWebsite } from "react-icons/cg";
-import { BsFillMoonStarsFill } from "react-icons/bs";
-import { MdSunny } from "react-icons/md";
-import { useContext, useState } from "react";
-import deved from "../../public/gj.png";
-import code from "../../public/code.png";
-import design from "../../public/design.png";
-import consulting from "../../public/consulting.png";
-import Image from "next/image";
-import web1 from "../../public/web1.png";
-import web2 from "../../public/web2.png";
-import web3 from "../../public/web3.png";
-import web4 from "../../public/web4.png";
-import web5 from "../../public/web5.png";
-import web6 from "../../public/web6.png";
-import styles from "./home.module.css";
-import { AnimatePresence, motion } from "framer-motion";
-import { ThemeContext } from "@/context/ThemeContext";
+'use client'
+import Head from 'next/head'
+import { AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai'
+import { AiOutlineCloud } from 'react-icons/ai'
+import { SiConsul } from 'react-icons/si'
+import { CgWebsite } from 'react-icons/cg'
+import { BsFillMoonStarsFill } from 'react-icons/bs'
+import { MdSunny } from 'react-icons/md'
+import { useContext, useRef, useState } from 'react'
+import deved from '../../public/gj.png'
+import code from '../../public/code.png'
+import design from '../../public/design.png'
+import consulting from '../../public/consulting.png'
+import Image from 'next/image'
+import web1 from '../../public/web1.png'
+import web2 from '../../public/web2.png'
+import web3 from '../../public/web3.png'
+import web4 from '../../public/web4.png'
+import web5 from '../../public/web5.png'
+import web6 from '../../public/web6.png'
+import styles from './home.module.css'
+import { AnimatePresence, motion } from 'framer-motion'
+import { ThemeContext } from '@/context/ThemeContext'
+import GlobeCanvas from '@/components/GlobeCanvas'
 
 export default function Home() {
-  const { toggle, theme } = useContext(ThemeContext);
+  const { toggle, theme } = useContext(ThemeContext)
+  const forCanvas = useRef(null)
   const handleClick = () => {
-    console.log("am hit");
-    toggle();
-  };
+    console.log('am hit')
+    toggle()
+  }
 
   return (
     <div className={`  overflow-y-visible overflow-x-hidden flex flex-col `}>
@@ -44,22 +42,16 @@ export default function Home() {
       <main className=" bg-white px-5 dark:bg-gray-900 md:px-20 lg:px-40">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between dark:text-white">
-            <p className=" font-burton text-xl font-bold">
-              {"</nvl>".toLowerCase()}
-            </p>
+            <p className=" font-burton text-xl font-bold">{'</nvl>'.toLowerCase()}</p>
             <ul className="flex items-center">
-              <li
-                onClick={() => handleClick()}
-                className=" cursor-pointer text-2xl dark:text-yellow-500 text-slate-800 "
-              >
+              <li onClick={() => handleClick()} className=" cursor-pointer text-2xl dark:text-yellow-500 text-slate-800 ">
                 <AnimatePresence>
-                  {theme === "dark" ? (
+                  {theme === 'dark' ? (
                     <motion.div
                       initial={{ opacity: 0, x: -100 }}
                       transition={{ duration: 1, damping: 200, stiffness: 600 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -100 }}
-                    >
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -100 }}>
                       <MdSunny />
                     </motion.div>
                   ) : (
@@ -67,18 +59,14 @@ export default function Home() {
                       initial={{ opacity: 0, x: 100 }}
                       transition={{ duration: 1, damping: 200, stiffness: 600 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: 100 }}
-                    >
+                      exit={{ opacity: 0, x: 100 }}>
                       <BsFillMoonStarsFill />
                     </motion.div>
                   )}
                 </AnimatePresence>
               </li>
               <li>
-                <a
-                  className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8"
-                  href="#"
-                >
+                <a className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8" href="#">
                   Resume
                 </a>
               </li>
@@ -95,11 +83,10 @@ export default function Home() {
                     opacity: 1,
 
                     bounce: 0.4,
-                    duration: 0.6,
-                  },
+                    duration: 0.6
+                  }
                 }}
-                className={` ${styles.grad} text-5xl py-2 text-transparent font-medium md:text-6xl`}
-              >
+                className={` ${styles.grad} text-5xl py-2 text-transparent font-medium md:text-6xl`}>
                 Nauval Yusuf Addairy
               </motion.h2>
             </div>
@@ -111,36 +98,24 @@ export default function Home() {
                 x: 0,
                 transition: {
                   bounce: 1,
-                  duration: 0.6,
-                },
+                  duration: 0.6
+                }
               }}
-              className="text-2xl py-2 dark:text-white md:text-3xl"
-            >
+              className="text-2xl py-2 dark:text-white md:text-3xl">
               Fullstack Developer and Certified Cloud Engineer
             </motion.h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-              As a seasoned freelancer, I specialize in crafting
-              high-performance web applications with top-notch architectures.
-              Join me, and lets make things happen!
+              As a seasoned freelancer, I specialize in crafting high-performance web applications with top-notch architectures. Join me, and lets make things
+              happen!
             </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
               <AiFillTwitterCircle />
               <AiFillLinkedin />
               <AiFillYoutube />
             </div>
-            <div
-              className={`mx-auto  ${styles.animated_border}  w-[300px] h-80 relative overflow-hidden mt-20 md:h-96 md:w-96`}
-            >
-              <div
-                className={`w-full h-full z-0 absolute top-0 ${styles.avatar} `}
-              ></div>
-              <Image
-                alt="deved"
-                src={deved}
-                layout="fill"
-                objectFit="cover"
-                className="z-10"
-              />
+            <div className={`mx-auto  ${styles.animated_border}  w-[300px] h-80 relative overflow-hidden mt-20 md:h-96 md:w-96`}>
+              <div className={`w-full h-full z-0 absolute top-0 ${styles.avatar} `}></div>
+              <Image alt="deved" src={deved} layout="fill" objectFit="cover" className="z-10" />
               <div className="w-full h-full z-20  absolute top-0"></div>
             </div>
           </div>
@@ -149,15 +124,11 @@ export default function Home() {
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Services I offer</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I specialize in creating powerful web applications using the{" "}
-              <span className="text-teal-500">MERN</span> {"  "}stack and excel
-              in <span className="text-teal-500">Cloud Development</span> {"  "}
-              with certifications to prove it. Whether you are a small business
-              or a large enterprise, my services offer a seamless user
-              experience, secure infrastructure, and tailored solutions. From
-              custom software development to optimizing databases and
-              implementing e-commerce platforms, I deliver robust and efficient
-              technology solutions. Lets elevate your digital presence together.
+              I specialize in creating powerful web applications using the <span className="text-teal-500">MERN</span> {'  '}stack and excel in{' '}
+              <span className="text-teal-500">Cloud Development</span> {'  '}
+              with certifications to prove it. Whether you are a small business or a large enterprise, my services offer a seamless user experience, secure
+              infrastructure, and tailored solutions. From custom software development to optimizing databases and implementing e-commerce platforms, I deliver
+              robust and efficient technology solutions. Lets elevate your digital presence together.
             </p>
           </div>
           <div className=" mt-16 ">
@@ -165,114 +136,65 @@ export default function Home() {
 
             <motion.div
               className="md:flex gap-10
-            "
-            >
+            ">
               {/* skill 1 */}
               <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 transition={{ duration: 0.5, bounce: 100, stiffness: 600 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                className="text-center shadow-lg p-10 rounded-xl my-10 bg-gray-800  dark:bg-white flex flex-col items-center flex-1"
-              >
+                className="text-center shadow-lg p-10 rounded-xl my-10 bg-gray-800  dark:bg-white flex flex-col items-center flex-1">
                 <AiOutlineCloud className="w-[100px] h-[100px] font-bold text-white dark:text-gray-800 " />
-                <h3 className="text-lg font-medium pt-8 pb-2 text-white dark:text-gray-800">
-                  Cloud Engineering
-                </h3>
+                <h3 className="text-lg font-medium pt-8 pb-2 text-white dark:text-gray-800">Cloud Engineering</h3>
                 <p
                   className="py-2 text-white/60 dark:text-gray-800/80
-              "
-                >
-                  Build your enterprise app to be scalable, secure, always up
-                  and running, even during peak traffic using cloud computing.
-                  Additionally, remove unnecessary costs when your system at
-                  idling state by leveraging serverless technology
+              ">
+                  Build your enterprise app to be scalable, secure, always up and running, even during peak traffic using cloud computing. Additionally, remove
+                  unnecessary costs when your system at idling state by leveraging serverless technology
                 </p>
-                <h4 className="py-4 text-teal-600 font-[500]">
-                  Technologies I Use
-                </h4>
-                <p className="text-white/60 dark:text-gray-800/80  py-1">
-                  Amazon Web Service
-                </p>
-                <p className="text-white/60 dark:text-gray-800/80  py-1">
-                  Firebase
-                </p>
+                <h4 className="py-4 text-teal-600 font-[500]">Technologies I Use</h4>
+                <p className="text-white/60 dark:text-gray-800/80  py-1">Amazon Web Service</p>
+                <p className="text-white/60 dark:text-gray-800/80  py-1">Firebase</p>
               </motion.div>
               {/* skill 2 */}
               <motion.div
-                initial={{ opacity: 0 }}
+                initial={{ opacity: 0, y: -200 }}
                 transition={{ duration: 1, bounce: 300, stiffness: 600 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                className="text-center shadow-lg p-10 rounded-xl my-10 bg-gray-800  dark:bg-white flex flex-col items-center flex-1"
-              >
+                whileInView={{ y: 0, opacity: 1 }}
+                className="text-center shadow-lg p-10 rounded-xl my-10 bg-gray-800  dark:bg-white flex flex-col items-center flex-1">
                 <CgWebsite className="w-[100px] h-[100px] font-bold text-white dark:text-gray-800 " />
-                <h3 className="text-lg font-medium pt-8 pb-2 text-white dark:text-gray-800">
-                  {" "}
-                  Web Developing
-                </h3>
+                <h3 className="text-lg font-medium pt-8 pb-2 text-white dark:text-gray-800"> Web Developing</h3>
                 <p
                   className="py-2 text-white/60 dark:text-gray-800/80
-              "
-                >
-                  Do you have a project idea? I can develop your project from
-                  the front end to the back end. Lets talk !.
+              ">
+                  Do you have a project idea? I can develop your project from the front end to the back end. Lets talk !.
                 </p>
-                <h4 className="py-4 text-teal-600 font-[500]">
-                  Technologies I Use
-                </h4>
-                <p className="text-white/60 dark:text-gray-800/80  py-1">
-                  Reactjs
-                </p>
-                <p className="text-white/60 dark:text-gray-800/80  py-1">
-                  Nextjs
-                </p>
-                <p className="text-white/60 dark:text-gray-800/80  py-1">
-                  Nodejs
-                </p>
-                <p className="text-white/60 dark:text-gray-800/80  py-1">
-                  Express.js
-                </p>
-                <p className="text-white/60 dark:text-gray-800/80  py-1">
-                  PostgreSQL
-                </p>
-                <p className="text-white/60 dark:text-gray-800/80  py-1">
-                  MongoDB
-                </p>
-                <p className="text-white/60 dark:text-gray-800/80  py-1">
-                  DynamoDB
-                </p>
+                <h4 className="py-4 text-teal-600 font-[500]">Technologies I Use</h4>
+                <p className="text-white/60 dark:text-gray-800/80  py-1">Reactjs</p>
+                <p className="text-white/60 dark:text-gray-800/80  py-1">Nextjs</p>
+                <p className="text-white/60 dark:text-gray-800/80  py-1">Nodejs</p>
+                <p className="text-white/60 dark:text-gray-800/80  py-1">Express.js</p>
+                <p className="text-white/60 dark:text-gray-800/80  py-1">PostgreSQL</p>
+                <p className="text-white/60 dark:text-gray-800/80  py-1">MongoDB</p>
+                <p className="text-white/60 dark:text-gray-800/80  py-1">DynamoDB</p>
               </motion.div>
               {/* skill 3 */}
               <motion.div
                 initial={{ x: 100, opacity: 0 }}
                 transition={{ duration: 0.5, bounce: 100, stiffness: 600 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                className="text-center shadow-lg p-10 rounded-xl my-10 bg-gray-800  dark:bg-white flex flex-col items-center flex-1"
-              >
+                className="text-center shadow-lg p-10 rounded-xl my-10 bg-gray-800  dark:bg-white flex flex-col items-center flex-1">
                 <SiConsul className="w-[100px] h-[100px] font-bold text-white dark:text-gray-800 " />
-                <h3 className="text-lg font-medium pt-8 pb-2 text-white dark:text-gray-800">
-                  {" "}
-                  Consulting
-                </h3>
+                <h3 className="text-lg font-medium pt-8 pb-2 text-white dark:text-gray-800"> Consulting</h3>
                 <p
                   className="py-2 text-white/60 dark:text-gray-800/80
-              "
-                >
-                  Are you interested in feedback for your current project? I can
-                  give you tips and tricks to level it up.
+              ">
+                  Are you interested in feedback for your current project? I can give you tips and tricks to level it up.
                 </p>
-                <h4 className="py-4 text-teal-600 font-medium">
-                  Communication tools I use
-                </h4>
-                <p className="text-white/60 dark:text-gray-800/80  py-1">
-                  Google Meet
-                </p>
+                <h4 className="py-4 text-teal-600 font-medium">Communication tools I use</h4>
+                <p className="text-white/60 dark:text-gray-800/80  py-1">Google Meet</p>
 
-                <p className="text-white/60 dark:text-gray-800/80  py-1">
-                  Slack
-                </p>
-                <p className="text-white/60 dark:text-gray-800/80  py-1">
-                  TeamViewer
-                </p>
+                <p className="text-white/60 dark:text-gray-800/80  py-1">Slack</p>
+                <p className="text-white/60 dark:text-gray-800/80  py-1">TeamViewer</p>
               </motion.div>
             </motion.div>
           </div>
@@ -281,75 +203,47 @@ export default function Home() {
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Portofolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Since the beginning of my journey as a freelance designer and
-              developer, I have done remote work for
+              Since the beginning of my journey as a freelance designer and developer, I have done remote work for
               <span className="text-teal-500"> agencies </span>
               consulted for <span className="text-teal-500">startups </span>
-              and collaborated with talanted people to create digital products
-              for both business and consumer use.
+              and collaborated with talanted people to create digital products for both business and consumer use.
             </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer from a wide range of services, including brand design,
-              programming and teaching.
+            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200" ref={forCanvas}>
+              I offer from a wide range of services, including brand design, programming and teaching.
+              <GlobeCanvas refs={forCanvas} />
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
             <div className=" basis-1/3 flex-1 ">
-              <Image
-                alt="s"
-                className=" w-full h-full rounded-lg object-cover"
-                layout="responsive"
-                src={web1}
-              />
+              <Image alt="s" className=" w-full h-full rounded-lg object-cover" layout="responsive" src={web1} />
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
-                className="w-full h-full rounded-lg object-cover"
-                alt="w2"
-                src={web2}
-              />
+              <Image className="w-full h-full rounded-lg object-cover" alt="w2" src={web2} />
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
-                alt="web3"
-                className="h-full w-full rounded-lg object-cover"
-                src={web3}
-              />
+              <Image alt="web3" className="h-full w-full rounded-lg object-cover" src={web3} />
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
-                className="w-full h-full rounded-lg object-cover"
-                alt="sd"
-                src={web4}
-              />
+              <Image className="w-full h-full rounded-lg object-cover" alt="sd" src={web4} />
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
-                className="w-full h-full rounded-lg object-cover"
-                alt="d"
-                src={web5}
-              />
+              <Image className="w-full h-full rounded-lg object-cover" alt="d" src={web5} />
             </div>
 
             <div className="basis-1/3 flex-1">
-              <Image
-                className="h-full w-full rounded-lg object-cover"
-                alt="t"
-                layout="responsive"
-                src={web6}
-              />
+              <Image className="h-full w-full rounded-lg object-cover" alt="t" layout="responsive" src={web6} />
             </div>
           </div>
         </section>
         <section className="w-full h-fit">
           <div className="w-full h-[300px] flex flex-row mb-12">
             <div className={`flex-1 relative z-0 ${styles.avatar}`}>
-              <div className="z-10 backdrop-blur-sm bg-slate-200/20 w-full h-full"></div>
+              <div className="z-10 backdrop-blur-sm bg-slate-200/20 w-full h-full"> </div>
             </div>
             <div className="flex-1  bg-teal-500"></div>
           </div>
         </section>
       </main>
     </div>
-  );
+  )
 }
