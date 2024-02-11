@@ -8,6 +8,7 @@ import styles from '../app/home.module.css'
 import { AiFillTwitterCircle, AiFillYoutube, AiFillLinkedin } from 'react-icons/ai'
 import Image from 'next/image'
 import deved from '../../public/gj.png'
+import Link from 'next/link'
 export default function Hero() {
   const { toggle, theme } = useContext(ThemeContext)
   const handleClick = () => {
@@ -41,8 +42,10 @@ export default function Hero() {
             </AnimatePresence>
           </li>
           <li>
-            <a className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8" href="#">
-              Resume
+            <a
+              href="#contact"
+              className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8 hover:cursor-pointer">
+              Contact
             </a>
           </li>
         </ul>
