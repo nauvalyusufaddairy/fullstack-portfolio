@@ -4,7 +4,6 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { Points, PointMaterial, Preload } from '@react-three/drei'
 import * as random from 'maath/random'
 import { ThemeContext } from '@/context/ThemeContext'
-import { Globe } from './globe'
 
 const Stars = ({ props }: { props?: THREE.Points }) => {
   const { theme } = useContext(ThemeContext)
