@@ -27,6 +27,7 @@ export default function Contact() {
       if (result?.succes) {
         setSuccess('Email sent')
       } else {
+        console.log('lahhh', result)
         setError('Something went wrong')
       }
     })
