@@ -5,7 +5,8 @@ import { useContext } from 'react'
 import { MdSunny } from 'react-icons/md'
 import { BsFillMoonStarsFill } from 'react-icons/bs'
 import styles from '../app/home.module.css'
-import { AiFillTwitterCircle, AiFillYoutube, AiFillLinkedin } from 'react-icons/ai'
+import { FaGithub, FaYoutube, FaLinkedin } from 'react-icons/fa'
+
 import Image from 'next/image'
 import deved from '../../public/gj.png'
 import Link from 'next/link'
@@ -86,15 +87,21 @@ export default function Hero() {
           As a seasoned freelancer, I specialize in crafting high-performance web applications with top-notch architectures. Join me, and lets make things
           happen!
         </p>
-        <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-          <AiFillTwitterCircle />
-          <AiFillLinkedin />
-          <AiFillYoutube />
+        <div className="text-4xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
+          <Link href={'https://github.com/nauvalyusufaddairy'}>
+            <FaGithub />
+          </Link>
+          <Link href={'https://www.linkedin.com/in/nauval-yusuf-addairy/'}>
+            <FaLinkedin />
+          </Link>
+          <Link href={'https://youtube.com'}>
+            <FaYoutube />
+          </Link>
         </div>
         <div className={`mx-auto  ${styles.animated_border}  w-[300px] h-80 relative overflow-hidden mt-20 md:h-96 md:w-96`}>
           <div className={`w-full h-full z-0 absolute top-0 ${styles.avatar} `}></div>
           <Image alt="deved" src={deved} layout="fill" objectFit="cover" className="z-10" />
-          <div className="w-full h-full z-20  absolute top-0"></div>
+          <div className="w-full h-full z-20  absolute top-0 "></div>
         </div>
       </div>
     </section>
