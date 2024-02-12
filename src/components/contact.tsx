@@ -24,7 +24,7 @@ export default function Contact() {
 
     setTransition(async () => {
       const result = await sendEmail(values)
-      if (result.succes) {
+      if (result?.succes) {
         setSuccess('Email sent')
       } else {
         setError('Something went wrong')

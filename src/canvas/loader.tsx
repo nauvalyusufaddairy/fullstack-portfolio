@@ -1,7 +1,14 @@
 import { Html, useProgress } from '@react-three/drei'
 
 const CanvasLoader = () => {
+  const getLocalStorage = () => {
+    if (typeof window !== 'undefined') {
+      const value = localStorage.getItem('theme') as string
+      return value
+    }
+  }
   const { progress } = useProgress()
+  const theme = getLocalStorage()
   return (
     <Html
       as="div"
@@ -16,7 +23,7 @@ const CanvasLoader = () => {
       <p
         style={{
           fontSize: 14,
-          color: '#F1F1F1',
+          color: theme === 'dark' ? '#F1F1F1F1' : '#000000',
           fontWeight: 800,
           marginTop: 40
         }}>
