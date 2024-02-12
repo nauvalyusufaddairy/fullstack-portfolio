@@ -15,6 +15,7 @@ import { useState, useTransition } from 'react'
 import FormError from './form-error'
 import FormSucces from './form-success'
 export default function Contact() {
+  const [raw, ste] = useState<string | unknown | undefined>()
   const [success, setSuccess] = useState('')
   const [error, setError] = useState('')
   const [isPending, setTransition] = useTransition()
@@ -24,11 +25,11 @@ export default function Contact() {
 
     setTransition(async () => {
       const result = await sendEmail(values)
+      ste(`${result}`)
       if (result?.succes) {
-        setSuccess('Email sent')
+        setSuccess(`${raw}`)
       } else {
-        console.log('lahhh', result)
-        setError('Something went wrong')
+        setError(`${raw}`)
       }
     })
   }
@@ -42,7 +43,7 @@ export default function Contact() {
     mode: 'onTouched'
   })
   return (
-    <div className="w-full h-fit flex flex-col-reverse md:flex-row mb-12 bg-white/5 rounded-md border-[1px] border-gray-300 text-slate-950 shadow-md dark:bg-slate-400/5 dark:text-white dark:border-none  overflow-y-auto relative">
+    <div className="w-full h-fit flex flex-col-reverse md:flex-row mb-12 bg-white/5 rounded-md border-[1px] border-gray-300 text-slate-950 shadow-md dark:bg-slate-400/5 dark:text-white dark:border-none  overflow-y-scroll relative">
       <div className="md:w-[500px] w-[385px] z-10 flex flex-col justify-center absolute h-[500px] px-6 pt-4 ">
         <h1 className="text-4xl mb-8">Contact me</h1>
         <div>
