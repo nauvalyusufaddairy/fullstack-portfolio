@@ -25,11 +25,11 @@ export default function Contact() {
 
     setTransition(async () => {
       const result = await sendEmail(values)
-      ste(`${result}`)
+
       if (result?.succes) {
-        setSuccess(`${raw}`)
+        setSuccess(`Email sent`)
       } else {
-        setError(`${raw}`)
+        setError(`Something went wrong`)
       }
     })
   }
