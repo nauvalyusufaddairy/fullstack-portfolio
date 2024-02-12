@@ -35,8 +35,9 @@ export default async function sendEmail(values: zod.infer<typeof EmailSchema>) {
     const command = new SendEmailCommand(params)
     const result = await sesClient.send(command)
     const res = result
-    return { succes: JSON.stringify(res) }
+    console.log(JSON.stringify({ res }))
+    return { succes: JSON.stringify({ res }) }
   } catch (error) {
-    return { e: JSON.stringify(error) }
+    return { e: JSON.stringify({ error }) }
   }
 }
